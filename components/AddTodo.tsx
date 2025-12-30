@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { todoSchema, type todoSchemaT } from "@/schemas/todo";
+import { todoSchema } from "@/schemas/todo";
 import { addTodo } from "@/actions/todos";
 
 const AddTodo = () => {
