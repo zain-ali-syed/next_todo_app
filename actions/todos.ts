@@ -19,6 +19,7 @@ export const getTodos = async () => {
 export const addTodo = async ({ title, description }: { title: string; description: string }) => {
   const user = await requireUser();
   try {
+    await connectToDatabase();
     await TodoModel.create({
       title,
       description,
@@ -35,7 +36,7 @@ export const deleteTodo = async (todoId: string) => {
   const user = await requireUser();
 
   try {
-    //also check ownership at the same time
+    await connectToDatabase();
     await TodoModel.findOneAndDelete({
       _id: todoId,
       userId: user.id,
@@ -51,6 +52,7 @@ export const completeTodo = async (todoId: string) => {
   const user = await requireUser();
 
   try {
+    await connectToDatabase();
     await TodoModel.findOneAndUpdate(
       { _id: todoId, userId: user.id },
       { completed: true },

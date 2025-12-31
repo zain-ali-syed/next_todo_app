@@ -1,6 +1,11 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
+ENV KINDE_ISSUER_URL=https://dummy.kinde.com
+ENV KINDE_CLIENT_ID=dummy-client-id
+ENV KINDE_CLIENT_SECRET=dummy-secret
+ENV MONGODB_URI=mongodb://dummy:dummy@localhost:27017/dummy
+
 RUN npm ci
 COPY . .
 RUN npm run build
