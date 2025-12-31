@@ -20,7 +20,7 @@ const AddTodo = () => {
   return (
     <Card className="min-w-75 self-start bg-gray-100">
       <CardHeader>
-        <CardTitle>Add Todo</CardTitle>
+        <CardTitle>Add Todo...</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit(addTodo)}>
