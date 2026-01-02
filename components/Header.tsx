@@ -15,7 +15,7 @@ const Header = async () => {
   return (
     <header>
       <div className="flex justify-between p-4 bg-gray-200 items-center">
-        {/* <Image src={user?.picture} alt="avatar" height={60} width={60} className="rounded-xl" /> */}
+        <Image src={user?.picture} alt="avatar" height={60} width={60} className="rounded-xl" />
         <ul className="flex gap-4">
           <li>
             <Link href="/">Home</Link>
