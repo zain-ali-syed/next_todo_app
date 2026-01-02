@@ -9,6 +9,8 @@ const Header = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser(); // from Kinde SDK
 
+  console.log("user pciture ", user?.picture);
+
   return (
     <header>
       <div className="flex justify-between p-4 bg-gray-200 items-center">
